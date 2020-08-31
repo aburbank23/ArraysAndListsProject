@@ -11,7 +11,7 @@ namespace ArraysAndLists
 
             // Create an int Array and populate numbers 1-10
 
-            var populateNumbers = new int[10] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            var numbersArray = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
             /* Create two Lists of type int.
              * Name one List "evens"
@@ -19,7 +19,6 @@ namespace ArraysAndLists
              */
 
             var evens = new List<int>();
-
             var odds = new List<int>();
 
             /* Using either a foreach or for loop,
@@ -29,18 +28,18 @@ namespace ArraysAndLists
              * or the odds List
              */
 
-
-            foreach (var number in populateNumbers)
+            foreach (var item in numbersArray)
             {
-                if(number  % 2 == 0)
+                if(item % 2 == 0)
                 {
-                    evens.Add(number);
+                    evens.Add(item);
                 }
                 else
                 {
-                    odds.Add(number);
+                    odds.Add(item);
                 }
             }
+
 
             /* Now using foreach or for loops,
              * display each List of even and odd numbers
@@ -50,11 +49,11 @@ namespace ArraysAndLists
 
             foreach (var item in evens)
             {
-                Console.WriteLine(item);
+                Console.WriteLine($"{item} is even.");
             }
             foreach (var item in odds)
             {
-                Console.WriteLine(item);
+                Console.WriteLine($"{item} is odd.");
             }
 
         }
